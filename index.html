@@ -4,12 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>简子翔 · 个人简历 | PROFILE</title>
-<meta name="description" content="简子翔的个人简历：宁德师范学院网络与新媒体专业本科在读，持有阿里巴巴人工智能训练师初级与高级双证，数据标注准确率稳定在 95% 以上，求职意向为 AI 训练 / 数据标注 / 新媒体运营。">
-<meta name="keywords" content="简子翔,简子翔简历,个人简历,宁德师范学院,网络与新媒体,人工智能训练师,数据标注,数据清洗,AI训练,新媒体运营,福建漳州">
+<meta name="description" content="简子翔的个人简历：中国新闻技术工作者联合会会员，宁德师范学院网络与新媒体专业本科在读，持有阿里巴巴人工智能训练师初级与高级双证，数据标注准确率稳定在 95% 以上，求职意向为 AI 训练 / 数据标注 / 新媒体运营。">
+<meta name="keywords" content="简子翔,简子翔简历,个人简历,中国新闻技术工作者联合会,新闻技术,宁德师范学院,网络与新媒体,人工智能训练师,数据标注,数据清洗,AI训练,新媒体运营,福建漳州">
 <meta name="author" content="简子翔">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://yanyu473.github.io/jianli2/">
 <meta name="theme-color" content="#070808">
+<link rel="canonical" href="https://yanyu473.github.io/jianli2/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="简子翔 · 个人简历">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="简子翔 · 个人简历 | 网络与新媒体 · AI 训练师">
+<meta property="og:description" content="中国新闻技术工作者联合会会员，宁德师范学院网络与新媒体专业本科在读，持有阿里巴巴人工智能训练师初级与高级双证，数据标注准确率稳定在 95% 以上。">
+<meta property="og:url" content="https://yanyu473.github.io/jianli2/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简子翔 · 个人简历 | 网络与新媒体 · AI 训练师">
+<meta name="twitter:description" content="中国新闻技术工作者联合会会员，宁德师范学院网络与新媒体专业本科在读，AI 训练 / 数据标注 / 新媒体运营。">
 <style>
 /* ================= 影调 v3 · 从零重写 · 参考暗黑作品集 ================= */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -75,6 +84,10 @@ img{max-width:100%;display:block}
 .rail-name{writing-mode:vertical-rl;font-family:var(--serif);font-size:21px;letter-spacing:0.5em;
   color:var(--tx);font-weight:600;margin-bottom:34px}
 .rail-name::after{content:'';display:block;width:1px;height:44px;background:var(--line-2);margin:18px auto 0}
+.rail-cred{writing-mode:vertical-rl;font-family:var(--serif);font-size:9px;letter-spacing:0.3em;
+  color:var(--gold);opacity:0.78;margin-bottom:24px;max-height:172px;overflow:hidden}
+.rail-cred::before{content:'';display:block;width:1px;height:26px;background:var(--gold);
+  opacity:0.45;margin:0 auto 14px}
 .rail-nav{display:flex;flex-direction:column;gap:16px;align-items:center}
 .rail-nav a{display:flex;flex-direction:column;align-items:center;gap:3px;
   font-size:8.5px;letter-spacing:0.22em;color:var(--tx3);transition:color 0.3s}
@@ -123,6 +136,28 @@ section{padding:15vh 0 10vh;max-width:1060px}
 .big-name .name-char:nth-child(3){animation-delay:0.85s}
 @keyframes charIn{0%{opacity:0;filter:blur(16px);transform:translateY(14px)}
   100%{opacity:1;filter:blur(0);transform:translateY(0)}}
+/* ---------- 名字旁的称号铭牌 ---------- */
+.name-cred{display:flex;align-items:stretch;gap:15px;margin:-10px 0 26px;
+  opacity:0;animation:credIn 1s cubic-bezier(0.2,0.7,0.3,1) 1.12s forwards}
+@keyframes credIn{0%{opacity:0;transform:translateY(12px)}100%{opacity:1;transform:translateY(0)}}
+.name-cred .cred-rule{flex:none;width:2px;
+  background:linear-gradient(180deg,var(--gold) 0%,rgba(200,162,106,0.35) 62%,rgba(200,162,106,0) 100%)}
+.name-cred .cred-txt{display:flex;flex-direction:column;gap:8px;padding-top:1px}
+.name-cred .cred-main{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.name-cred .cred-seal{flex:none;display:inline-flex;align-items:center;justify-content:center;
+  width:23px;height:23px;border:1px solid rgba(200,162,106,0.55);border-radius:50%;
+  font-family:var(--serif);font-size:10px;letter-spacing:0;color:var(--gold);
+  background:rgba(200,162,106,0.06)}
+.name-cred .cred-cn{font-family:var(--serif);font-size:13.5px;letter-spacing:0.2em;color:var(--tx)}
+.name-cred .cred-cn b{color:var(--gold);font-weight:600}
+.name-cred .cred-sep{color:#4a4c4e;font-size:11px}
+.name-cred .cred-en{font-family:Georgia,serif;font-size:9.5px;letter-spacing:0.26em;
+  color:var(--tx3);text-transform:uppercase}
+@media (max-width:620px){
+  .name-cred{margin-bottom:22px}
+  .name-cred .cred-cn{font-size:12px;letter-spacing:0.14em}
+  .name-cred .cred-en{font-size:8.5px;letter-spacing:0.18em}
+}
 .hero-title-line{font-size:14px;letter-spacing:0.1em;color:var(--gold);margin-bottom:20px;font-weight:600}
 .hero-desc{font-size:14px;line-height:2.1;color:var(--tx2);max-width:560px;margin-bottom:34px}
 .tagwall{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:36px}
@@ -306,6 +341,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
   .reveal{opacity:1;transform:none}
   .d1,.d2,.d3,.d4,.d5,.d6{opacity:1;animation:none}
   .big-name .name-char{opacity:1;filter:none;animation:none}
+  .name-cred{opacity:1;animation:none}
 }
 /* ---------- 打印 ---------- */
 @media print{
@@ -320,6 +356,12 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
   .reveal{opacity:1!important;transform:none!important}
   .big-name .name-char{opacity:1!important;filter:none!important;animation:none!important}
   .d1,.d2,.d3,.d4,.d5,.d6{opacity:1!important;animation:none!important}
+  .name-cred{opacity:1!important;transform:none!important;animation:none!important;margin-top:6px}
+  .name-cred .cred-cn{color:#16181a}
+  .name-cred .cred-cn b{color:#8a6d3a}
+  .name-cred .cred-rule{background:#8a6d3a}
+  .name-cred .cred-seal{border-color:#8a6d3a;color:#8a6d3a;background:transparent}
+  .name-cred .cred-en{color:#555}
   .stat b,.sk-bar i,.svc-ghost{-webkit-text-stroke:0}
   .svc-ghost{color:#8a6d3a}
 }
@@ -329,6 +371,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
     border-right:none;border-bottom:1px solid var(--line);gap:18px}
   .rail-name{writing-mode:horizontal-tb;letter-spacing:0.3em;font-size:16px;margin-bottom:0}
   .rail-name::after{display:none}
+  .rail-cred{display:none}
   .rail-nav{flex-direction:row;gap:14px;overflow-x:auto;padding-bottom:2px}
   .rail-nav a{flex-direction:row;gap:5px;font-size:9px;white-space:nowrap}
   .rail-foot{display:none}
@@ -371,6 +414,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
 
 <aside class="rail">
   <div class="rail-name">简子翔</div>
+  <div class="rail-cred">中国新闻技术工作者联合会会员</div>
   <nav class="rail-nav">
     <a href="#profile" class="on"><i>01</i><span>PROFILE</span></a>
     <a href="#services"><i>02</i><span>SERVICES</span></a>
@@ -399,6 +443,16 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
       <div>
         <p class="pinyin d1">Jian Zixiang · Fujian Zhangzhou</p>
         <h1 class="big-name"><span class="name-char">简</span><span class="name-char">子</span><span class="name-char">翔</span></h1>
+        <div class="name-cred">
+          <span class="cred-rule" aria-hidden="true"></span>
+          <span class="cred-txt">
+            <span class="cred-main">
+              <span class="cred-seal" aria-hidden="true">会</span>
+              <span class="cred-cn">中国新闻技术工作者联合会<span class="cred-sep"> · </span><b>会员</b></span>
+            </span>
+            <span class="cred-en">Member · China News Technology Workers Federation</span>
+          </span>
+        </div>
         <p class="hero-title-line d2" id="heroTitle"></p>
         <p class="hero-desc d3" id="heroDesc"></p>
         <div class="tagwall d4" id="tagwall"></div>
@@ -447,7 +501,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
 </main>
 
 <footer class="footer">
-  <span>© 2026 简子翔 · 个人简历</span>
+  <span>© 2026 简子翔 · 个人简历 · 中国新闻技术工作者联合会会员</span>
   <span>LAST UPDATE · <span id="updateDate"></span></span>
 </footer>
 
@@ -477,11 +531,11 @@ const resume = {
     intention: "AI训练 / 数据标注 / 新媒体运营"
   },
   heroTitle: "网络与新媒体 · 本科在读 | 人工智能训练师（初级 / 高级）",
-  heroDesc: "宁德师范学院网络与新媒体专业本科在读。持有阿里巴巴人工智能训练师初级与高级双证，数据标注准确率稳定在 95% 以上；高中三年担任历史、地理、日语三科课代表，把作业收缴、错题归档、学情反馈做成标准化流程，服务班级 50+ 人。会用 AI 工具，也能把事情落到地上。",
+  heroDesc: "宁德师范学院网络与新媒体专业本科在读，中国新闻技术工作者联合会会员。持有阿里巴巴人工智能训练师初级与高级双证，数据标注准确率稳定在 95% 以上；高中三年担任历史、地理、日语三科课代表，把作业收缴、错题归档、学情反馈做成标准化流程，服务班级 50+ 人。关注媒体技术与内容生产的结合，习惯用行业规范约束产出质量。会用 AI 工具，也能把事情落到地上。",
   badges: [
     "人工智能训练", "数据标注", "数据清洗", "标签体系",
     "跨学科协调", "任务管理", "质量反馈", "团队协作",
-    "日语基础", "Office 套件", "AI 游戏设计"
+    "新闻技术", "行业规范", "日语基础", "Office 套件", "AI 游戏设计"
   ],
   stats: [
     { num: "506", label: "高考总分" },
