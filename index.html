@@ -1166,5 +1166,27 @@ function initMusic(){
 }
 initMusic();
 </script>
+
+<script>
+/* ===== 打印 / 导出 PDF：强制把懒加载的图加载出来，避免打印稿缺图 ===== */
+(function(){
+  function forceAll(){
+    var list=document.querySelectorAll('img[loading="lazy"]');
+    for(var i=0;i<list.length;i++){
+      var im=list[i];
+      im.loading='eager';
+      var s=im.getAttribute('src');
+      if(s && !(im.complete && im.naturalWidth>0)){ im.removeAttribute('src'); im.setAttribute('src',s); }
+    }
+  }
+  window.addEventListener('beforeprint', forceAll);
+  try{
+    var mq=window.matchMedia('print');
+    var on=function(e){ if(e.matches) forceAll(); };
+    if(mq.addEventListener) mq.addEventListener('change',on);
+    else if(mq.addListener) mq.addListener(on);
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
