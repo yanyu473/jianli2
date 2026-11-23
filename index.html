@@ -156,6 +156,7 @@ section{padding:15vh 0 10vh;max-width:1060px}
 .stat{flex:1;padding:20px 8px;text-align:center;border-right:1px solid var(--line)}
 .stat:last-child{border-right:none}
 .stat b{display:block;font-family:Georgia,var(--serif);font-size:30px;font-weight:600;color:var(--gold);line-height:1.15}
+.stat .stat-main{font-size:clamp(17px,1.55vw,23px);letter-spacing:0.02em;white-space:nowrap;line-height:1.4}
 .stat span{font-size:10px;letter-spacing:0.22em;color:var(--tx3)}
 .portrait{position:relative;justify-self:end;width:min(320px,80%)}
 .portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(0.25) contrast(1.05);
@@ -291,6 +292,23 @@ section{padding:15vh 0 10vh;max-width:1060px}
 .cert-row:last-child{border-bottom:none}
 .cert-row:hover{padding-left:8px;color:var(--gold)}
 .cert-row em{font-style:normal;font-size:10px;color:var(--tx3);white-space:nowrap;letter-spacing:0.08em}
+/* 获奖证书 · 竖版完整展示 */
+.award-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:26px}
+.aw{display:grid;grid-template-columns:186px 1fr;border:1px solid rgba(200,162,106,0.28);border-radius:2px;background:var(--panel);
+  overflow:hidden;cursor:zoom-in;transition:border-color .4s,transform .4s cubic-bezier(.2,.7,.3,1),background .4s}
+.aw:hover{border-color:rgba(200,162,106,0.62);transform:translateY(-3px);background:var(--panel-2)}
+.aw-img{background:#0b0d0e;display:flex;align-items:center;justify-content:center;padding:14px;
+  border-right:1px solid var(--line)}
+.aw-img img{max-width:100%;max-height:270px;width:auto;height:auto;object-fit:contain;
+  box-shadow:0 12px 38px rgba(0,0,0,0.6);transition:box-shadow .4s}
+.aw:hover .aw-img img{box-shadow:0 16px 46px rgba(0,0,0,0.75)}
+.aw figcaption{padding:20px;display:flex;flex-direction:column;justify-content:center}
+.aw-lv{display:inline-block;font-size:9px;letter-spacing:0.26em;color:var(--gold);
+  border:1px solid rgba(200,162,106,0.34);padding:3px 9px;margin-bottom:10px}
+.aw figcaption b{display:block;font-family:var(--serif);font-size:14.5px;font-weight:600;
+  color:var(--tx);letter-spacing:0.04em;line-height:1.5}
+.aw figcaption em{display:block;font-style:normal;font-size:10.5px;color:var(--tx3);
+  margin-top:7px;line-height:1.65}
 .certwall{margin-top:26px}
 .cw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .cw{border:1px solid var(--line);border-radius:2px;background:var(--panel);overflow:hidden;
@@ -405,6 +423,14 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
   .prj-tech span{color:#555;border-color:#ccc;font-size:9px}
   .more-works{display:none}
   .prj-live,.prj-zoom{display:none}
+  .award-grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+  .aw{grid-template-columns:112px 1fr}
+  .aw-img{padding:8px;border-right:1px solid #ddd;background:#fff}
+  .aw-img img{max-height:150px;box-shadow:none}
+  .aw figcaption{padding:8px 10px}
+  .aw-lv{font-size:7.5px;padding:2px 6px;margin-bottom:5px;border-color:#8a6d3a;color:#8a6d3a}
+  .aw figcaption b{font-size:10px}
+  .aw figcaption em{font-size:7.5px;margin-top:3px;color:#666}
   .cw-grid{grid-template-columns:repeat(3,1fr)}
   .cw-img{height:110px}
   .cw figcaption{font-size:9.5px;padding:8px 10px}
@@ -436,6 +462,8 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
   .footer{margin-left:0}
   .profile-grid,.skills-wrap,.edu-wrap{grid-template-columns:1fr}
   .cw-grid{grid-template-columns:1fr 1fr}
+  .award-grid{grid-template-columns:1fr;gap:14px}
+  .aw{grid-template-columns:130px 1fr}
   .portrait{justify-self:start;margin-top:10px}
   .prj,.prj:nth-child(even){grid-template-columns:1fr}
   .prj:nth-child(even) .prj-media{order:0}
@@ -539,7 +567,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
   </section>
 
   <section id="experience" data-page-node-id="OqgGHRDdu6dB5yNgC7zt9L">
-    <header class="sec-head" data-page-node-id="6yGPdz9sDPHvNYnEoTJC9r"><span class="sec-no" data-page-node-id="0ApUiDlHGQvJBz86TvDz6A">03</span><h2 class="sec-title" data-page-node-id="Vbd9kxkI6T9F5FIBeSzHPe">EXPERIENCE</h2><span class="sec-cn" data-page-node-id="S4TDcdWQWLUyA9RbnkIGZs">校园经历</span></header>
+    <header class="sec-head" data-page-node-id="6yGPdz9sDPHvNYnEoTJC9r"><span class="sec-no" data-page-node-id="0ApUiDlHGQvJBz86TvDz6A">03</span><h2 class="sec-title" data-page-node-id="Vbd9kxkI6T9F5FIBeSzHPe">EXPERIENCE</h2><span class="sec-cn" data-page-node-id="S4TDcdWQWLUyA9RbnkIGZs">竞赛与校园经历</span></header>
     <div class="xpline" id="xpLine" data-page-node-id="aga1z6GEWxSFwitThUh2IH"></div>
   </section>
 
@@ -550,6 +578,7 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;bac
 
   <section id="certificates" data-page-node-id="certSecNode">
     <header class="sec-head" data-page-node-id="certHeadNode"><span class="sec-no" data-page-node-id="certNoNode">05</span><h2 class="sec-title" data-page-node-id="certTitleNode">CERTIFICATES</h2><span class="sec-cn" data-page-node-id="certCnNode">证书荣誉</span></header>
+    <div class="award-grid reveal" id="awardGrid"></div>
     <div class="certwall reveal" data-page-node-id="PZl3aXVnVvuSeg4LCmAxVZ">
       <div class="cw-grid" id="certGrid" data-page-node-id="8WojfFIZ5iPMbojozeOmCV"></div>
     </div>
@@ -600,7 +629,7 @@ const resume = {
     intention: "互动创意开发 / 数据可视化 / AI 内容应用"
   },
   heroTitle: "跨学科创意技术人 · 互动开发 / 数据可视化 / AI 应用",
-  heroDesc: "宁德师范学院网络与新媒体专业本科在读，中国新闻技术工作者联合会会员，持阿里巴巴人工智能训练师初级与高级双证，标注准确率稳定在 95% 以上。<em>独立完成 4 个从 0 到 1 的 AI 互动作品</em>：手写 GLSL 着色器的实时三维材质实验室、逐分钟演算的城市雨洪模拟、23 万格地形的古风战略游戏、MediaPipe 本地推理的手势粒子可视化。习惯把复杂逻辑拆成可交付的单文件网页——资源全部内嵌、离线双击可用、运行不依赖任何外部服务。",
+  heroDesc: "宁德师范学院网络与新媒体专业本科在读，中国新闻技术工作者联合会会员，持阿里巴巴人工智能训练师初级与高级双证。<em>2026 年任队长参加第十九届先进机器人及仿真技术大赛</em>「水中机器鱼仿真组 · 障碍竞速」，获<em>福建赛区一等奖、全国三等奖</em>。独立完成 8 个在线创意技术作品：手写 GLSL 着色器的实时三维材质实验室、逐分钟演算的城市雨洪模拟、23 万格地形的古风战略游戏、MediaPipe 本地推理的手势粒子可视化。习惯把复杂逻辑做成可交付的单文件网页。",
   badges: [
     "WebGL", "GLSL 着色器", "Three.js", "MediaPipe 手势识别", "粒子系统",
     "数据可视化", "参数化建模", "单文件自包含交付", "人工智能训练", "创意编程", "日语基础", "中文写作"
@@ -687,8 +716,20 @@ const resume = {
   ],
   experience: [
     {
+      title: "队长 · 第十九届先进机器人及仿真技术大赛",
+      company: "中国仿真学会 · 水中机器鱼仿真组（障碍竞速）",
+      orgEn: "CHINA SIMULATION FEDERATION · RST 2026",
+      date: "2026.09 - 2026.11",
+      duties: [
+        "任队长参加「水中机器鱼仿真组 · 障碍竞速」赛项，负责仿真环境搭建、运动控制策略设计与赛道调试",
+        "福建赛区选拔获一等奖；全国总决赛获三等奖（指导教师：林蔚菁）",
+        "个人赛制，独立完成方案设计、仿真调试与提交的全流程"
+      ]
+    },
+    {
       title: "高中三科课代表（历史 / 地理 / 日语）",
       company: "兰水中学",
+      orgEn: "LANSHUI HIGH SCHOOL",
       date: "2023.09 - 2026.06",
       duties: [
         "统筹三科作业收集、批改反馈与错题归档，覆盖班级 50+ 人，按时提交率由 85% 提升至 98%",
@@ -697,6 +738,10 @@ const resume = {
         "搭建电子错题本并统一管理三科学习资料，同学期末复习效率提升 20%，获师生一致认可"
       ]
     }
+  ],
+  awards: [
+    { image: "assets/cert-7.jpg", level: "国家级 · 全国三等奖", title: "第十九届先进机器人及仿真技术大赛", meta: "水中机器鱼仿真组 · 障碍竞速 ｜ 中国仿真学会 ｜ 2026.11" },
+    { image: "assets/cert-8.jpg", level: "省级 · 福建赛区一等奖", title: "第十九届先进机器人及仿真技术大赛", meta: "水中机器鱼仿真组 · 障碍竞速 ｜ 2026.11 ｜ 晋级全国总决赛" }
   ],
   gallery: [
     { image: "assets/cert-1.jpg", title: "人工智能训练师（初级）", desc: "达摩院智能客服「人工智能训练师」初级培训认证合格" },
@@ -713,7 +758,8 @@ const resume = {
         { name: "WebGL / GLSL 着色器", level: 78, desc: "手写顶点与片元着色器，FBM 噪声与程序化材质" },
         { name: "Three.js 三维场景", level: 76, desc: "城市场景搭建、程序化地形与相机控制" },
         { name: "粒子系统与视觉动效", level: 74, desc: "4800 粒子形态渐变与手势状态映射" },
-        { name: "参数化与物理建模", level: 72, desc: "雨洪逐分钟演算、23 万格地形系统" }
+        { name: "参数化与物理建模", level: 72, desc: "雨洪逐分钟演算、23 万格地形系统" },
+        { name: "仿真建模与调试", level: 72, desc: "机器鱼仿真 · 障碍竞速，省赛一等奖 / 国赛三等奖" }
       ]
     },
     {
@@ -758,6 +804,8 @@ const resume = {
     }
   ],
   certificates: [
+    { main: "第十九届先进机器人及仿真技术大赛 · 全国三等奖", sub: "2026.11" },
+    { main: "第十九届先进机器人及仿真技术大赛 · 福建赛区一等奖", sub: "2026.11" },
     { main: "独立创意技术作品 ×8", sub: "WebGL / Three.js / MediaPipe / 游戏开发" },
     { main: "阿里巴巴人工智能训练师（高级）证书", sub: "阿里官方认证" },
     { main: "阿里巴巴人工智能训练师（初级）证书", sub: "阿里官方认证" },
@@ -821,7 +869,7 @@ $('#xpLine').innerHTML=resume.experience.map(x=>`
   <div class="xp reveal">
     <span class="xp-date">${x.date}</span>
     <h3 class="xp-title">${x.title}</h3>
-    <span class="xp-org">${x.company} // LANSHUI HIGH SCHOOL</span>
+    <span class="xp-org">${x.company}${x.orgEn?' // '+x.orgEn:''}</span>
     <div class="xp-body">${x.duties.map(d=>`<p>${d}</p>`).join('')}</div>
   </div>`).join('');
 
@@ -846,6 +894,19 @@ $('#certGrid').innerHTML=resume.gallery.map(g=>`
     <div class="cw-img"><img src="${g.image}" alt="${g.title}" loading="lazy" decoding="async"></div>
     <figcaption><b>${g.title}</b>${g.desc}</figcaption>
   </figure>`).join('');
+
+const awEl=document.getElementById('awardGrid');
+if(awEl&&resume.awards){
+  awEl.innerHTML=resume.awards.map(a=>`
+    <figure class="aw" data-src="${a.image}">
+      <div class="aw-img"><img src="${a.image}" alt="${a.title} · ${a.level}" loading="lazy" decoding="async"></div>
+      <figcaption>
+        <span class="aw-lv">${a.level}</span>
+        <b>${a.title}</b>
+        <em>${a.meta}</em>
+      </figcaption>
+    </figure>`).join('');
+}
 
 // 更多作品数据
 const moreWorks = [
@@ -881,7 +942,7 @@ $('#mailBtn').href='mailto:'+resume.basic.email;
 $('#mailBtn').innerHTML='<span>✉</span> '+resume.basic.email;
 
 /* ============ 灯箱（作品截图 / 证书） ============ */
-$$('.prj-media,.cw').forEach(el=>el.addEventListener('click',e=>{
+$$('.prj-media,.cw,.aw').forEach(el=>el.addEventListener('click',e=>{
   if(e.target.closest('.prj-live'))return;
   const s=el.dataset.src||el.querySelector(".prj-img-main").src;
   $('#lightboxImg').src=s;$('#lightbox').classList.add('on');
